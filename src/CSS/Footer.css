@@ -1,0 +1,10 @@
+.btn-outline-primary:hover {
+    color: white !important;
+    border-color: #7510F7 !important;
+
+}
+.btn-outline-light:hover{
+    color: #7510F7 !important;
+    opacity:"100%";
+    border-color: #7510F7 !important;
+}
