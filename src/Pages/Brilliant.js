@@ -92,7 +92,7 @@ export default function Brilliant() {
         <div className={classes.title}>Brilliant Website</div>
         <div className={classes.text}>
           Brilliant is an Australian lift installation and maintenance company.
-          The websit's main objective waas providing the identity and services
+          The website's main objective was providing the identity and services
           of Brilliant and the ability to view some of their work and contact
           them. The project was front-end intensive, implemented using react and
           expressJs.

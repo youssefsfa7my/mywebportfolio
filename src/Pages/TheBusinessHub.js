@@ -98,7 +98,7 @@ export default function TheBusinessHub() {
         <PageContainer
           title={"Home Page"}
           text={
-            "HThe homepage describes everything about the startup. With the option to login and become a member. You could scroll around the homepage freely without logging in to have an idea about the business."
+            "The homepage describes everything about the startup. With the option to login and become a member. You could scroll around the homepage freely without logging in to have an idea about the business."
           }
           laptop={tbh_home}
           phone={tbh_home_m}
