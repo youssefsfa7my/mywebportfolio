@@ -12,23 +12,7 @@ import Stract from "./Pages/Stract";
 
 function App() {
   return (
-    <Scrollbars
-      id={"scrollbars"}
-      style={{ width: "100%", height: "100vh" }}
-      // renderTrackHorizontal={(props) => (
-      //   <div {...props} className="track-horizontal" />
-      // )}
-      renderTrackVertical={(props) => (
-        <div {...props} className="track-vertical" />
-      )}
-      // renderThumbHorizontal={(props) => (
-      //   <div {...props} className="thumb-horizontal" />
-      // )}
-      renderThumbVertical={(props) => (
-        <div {...props} className="thumb-vertical" />
-      )}
-    >
-      {/* <Router> */}
+    <div>
       <Routes>
         <Route exact path="/" element={<Homepage />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
@@ -40,8 +24,7 @@ function App() {
           element={<TheBusinessHub />}
         ></Route>
       </Routes>
-      {/* </Router> */}
-    </Scrollbars>
+    </div>
   );
 }
 
