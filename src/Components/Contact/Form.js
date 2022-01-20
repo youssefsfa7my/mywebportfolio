@@ -1,9 +1,11 @@
-import * as React from "react";
+import React, { useState } from "react";
 
 import TextField from "@mui/material/TextField";
 import Button from "react-bootstrap/Button";
 import { makeStyles } from "@mui/styles";
 import { isMobile } from "react-device-detect";
+import { send } from "emailjs-com";
+import { useNavigate } from "react-router-dom";
 
 import "../../CSS/Header.css";
 const useStyles = makeStyles({
@@ -36,44 +38,86 @@ const useStyles = makeStyles({
 });
 
 export default function ComposedTextField() {
+  const navigate = useNavigate();
+
   const classes = useStyles();
   const [value, setValue] = React.useState("");
-
-  const handleChange1 = (event) => {
-    setValue(event.target.value);
+  const [toSend, setToSend] = useState({
+    from_name: "",
+    to_name: "Youssef",
+    message: "",
+    reply_to: "",
+  });
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {};
+  const onSubmit = (e) => {
+    console.log("TOTO");
+    e.preventDefault();
+    send(
+      "service_brl75kk",
+      "template_y7rbr6j",
+      toSend,
+      "user_EsywzfdvKH8cGzk3Gm4RT"
+    )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+
+    var element = document.getElementById("toplogo");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
+    navigate("/thankyou");
+  };
+
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <div className={classes.textfieldDiv}>
           <TextField
+            required
+            name="from_name"
             id="outlined-basic"
             label="Name"
+            value={toSend.from_name}
             variant="outlined"
             className={classes.textfield1}
             color="secondary"
+            onChange={handleChange}
           />
           <TextField
+            type={"email"}
+            required
             id="outlined-basic"
             label="Email"
+            name="reply_to"
             variant="outlined"
+            value={toSend.reply_to}
             className={classes.textfield2}
             color="secondary"
+            onChange={handleChange}
           />
         </div>
         <div className={classes.textfieldDiv}>
           <TextField
+            required
             rows={4}
             id="outlined-multiline-flexible"
+            name="message"
             label="Message"
             multiline
-            value={value}
-            onChange={handleChange1}
+            value={toSend.message}
             fullWidth
             className={classes.textfield3}
             color="secondary"
+            onChange={handleChange}
           />
         </div>
 
@@ -93,6 +137,7 @@ export default function ComposedTextField() {
             fontFamily: "Eurostile !important",
             padding: isMobile ? "1vw" : "0.5vw",
           }}
+          onSubmit={onSubmit}
         >
           Submit
         </Button>

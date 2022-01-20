@@ -4,12 +4,15 @@ import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import { isMobile } from "react-device-detect";
+import { useNavigate } from "react-router-dom";
 
 //import Nav from "react-bootstrap/Nav";
 //import Button from "react-bootstrap/Button";
 import "../CSS/Header.css";
 
 export default function Header() {
+  const navigate = useNavigate();
+
   return (
     <Navbar
       bg="none"
@@ -61,7 +64,15 @@ export default function Header() {
                 fontWeight: "400",
                 padding: isMobile ? "1vw" : "0.5vw",
               }}
-              href="/"
+              onClick={() => {
+                var element = document.getElementById("toplogo");
+                element.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "nearest",
+                });
+                navigate("/");
+              }}
             >
               Go Back
             </Button>
