@@ -28,56 +28,19 @@ function App() {
         <div {...props} className="thumb-vertical" />
       )}
     >
-      <div style={{ position: "none" }}>
-        <Router>
-          <div>
-            {/* <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-          </ul> */}
-
-            {/* <hr /> */}
-
-            {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
-            <Routes>
-              <Route exact path="/" element={<Homepage />}></Route>
-            </Routes>
-            <Routes>
-              <Route exact path="/contact" element={<Contact />}></Route>
-            </Routes>
-            <Routes>
-              <Route
-                exact
-                path="/projects/brilliant"
-                element={<Brilliant />}
-              ></Route>
-            </Routes>
-            <Routes>
-              <Route exact path="/projects/stract" element={<Stract />}></Route>
-            </Routes>
-            <Routes>
-              <Route
-                exact
-                path="/projects/thebusinesshub"
-                element={<TheBusinessHub />}
-              ></Route>
-            </Routes>
-          </div>
-        </Router>
-      </div>
+      {/* <Router> */}
+      <Routes>
+        <Route exact path="/" element={<Homepage />}></Route>
+        <Route exact path="/contact" element={<Contact />}></Route>
+        <Route exact path="/projects/brilliant" element={<Brilliant />}></Route>
+        <Route exact path="/projects/stract" element={<Stract />}></Route>
+        <Route
+          exact
+          path="/projects/thebusinesshub"
+          element={<TheBusinessHub />}
+        ></Route>
+      </Routes>
+      {/* </Router> */}
     </Scrollbars>
   );
 }

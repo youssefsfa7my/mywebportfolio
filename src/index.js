@@ -7,15 +7,17 @@ import "./fonts/EurostileBold.ttf";
 import "./fonts/EurostileExtended.ttf";
 import "./fonts/EurostileOblique.ttf";
 import "./fonts/EuroStyleNormal.ttf";
+import { BrowserRouter } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
