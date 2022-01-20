@@ -7,15 +7,15 @@ import "./fonts/EurostileBold.ttf";
 import "./fonts/EurostileExtended.ttf";
 import "./fonts/EurostileOblique.ttf";
 import "./fonts/EuroStyleNormal.ttf";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
