@@ -13,7 +13,8 @@ import Stract from "./Pages/Stract";
 function App() {
   return (
     <div>
-      <Routes>
+      toot
+      {/* <Routes>
         <Route exact path="/" element={<Homepage />}></Route>
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/projects/brilliant" element={<Brilliant />}></Route>
@@ -23,7 +24,7 @@ function App() {
           path="/projects/thebusinesshub"
           element={<TheBusinessHub />}
         ></Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
