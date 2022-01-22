@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mywebportfolio/static/css/main.74aefbfc.css",
-    "main.js": "/mywebportfolio/static/js/main.1421b987.js",
+    "main.css": "/mywebportfolio/static/css/main.748f48b8.css",
+    "main.js": "/mywebportfolio/static/js/main.fa5dd82a.js",
     "static/js/787.7dada617.chunk.js": "/mywebportfolio/static/js/787.7dada617.chunk.js",
     "static/media/brilliant_home.gif": "/mywebportfolio/static/media/brilliant_home.b7ad6576016b16f49f83.gif",
     "static/media/briliant_products.gif": "/mywebportfolio/static/media/briliant_products.99b0ad28d9350fbfe7ea.gif",
@@ -55,12 +55,12 @@
     "static/media/logoWhite.svg": "/mywebportfolio/static/media/logoWhite.c308ff679d5fb85b151fb2bdba3e2045.svg",
     "index.html": "/mywebportfolio/index.html",
     "static/media/menu.svg": "/mywebportfolio/static/media/menu.14add05e0244c3e231cc.svg",
-    "main.74aefbfc.css.map": "/mywebportfolio/static/css/main.74aefbfc.css.map",
-    "main.1421b987.js.map": "/mywebportfolio/static/js/main.1421b987.js.map",
+    "main.748f48b8.css.map": "/mywebportfolio/static/css/main.748f48b8.css.map",
+    "main.fa5dd82a.js.map": "/mywebportfolio/static/js/main.fa5dd82a.js.map",
     "787.7dada617.chunk.js.map": "/mywebportfolio/static/js/787.7dada617.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74aefbfc.css",
-    "static/js/main.1421b987.js"
+    "static/css/main.748f48b8.css",
+    "static/js/main.fa5dd82a.js"
   ]
 }
